@@ -5,7 +5,8 @@
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nw"
+    "start": "nw",
+    "build": "nwbuild -p 'osx64','win32','win64' -o ./build ./src"
   },
   "author": "",
   "license": "ISC",
