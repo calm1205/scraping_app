@@ -6,8 +6,5 @@
   "window": {
     "resizable": false,
     "show_in_taskbar": true
-  },
-  "dependencies": {
-    "jsdom": "^16.6.0"
   }
 }
