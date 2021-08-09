@@ -5,31 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web scraping</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="app.js"></script>
+    <script src="app.js" type="module"></script>
   </head>
-  <body>
-    <h1>web scraping</h1>
 
+  <body>
+    <h1>Web Scraping</h1>
     <div class="input_form">
       <p>URL</p>
-      <input type="text" />
+      <input
+        type="text"
+        id="url"
+        value="https://job.rikunabi.com/2022/search/company/result/?fw=&ms=0&kk=0&wk=2&wk=3&wk=4&wk=5&aot=&apr=&cwr=&cmr=&rry=3&rr=&ggr=1&gr=&awy=&wer=&wmr=&exr=1&hu=1"
+      />
     </div>
 
     <div class="input_form">
-      <p>domain</p>
-      <input type="text" />
+      <p>Parent Selector</p>
+      <input type="text" id="parent_selector" value=".ts-h-search-cassette" />
     </div>
 
     <div class="input_form">
-      <p>selector</p>
-      <input type="text" />
+      <p>Child Selector: 1</p>
+      <input
+        type="text"
+        class="selector"
+        value=".ts-h-search-cassetteTitleMain"
+      />
+    </div>
+
+    <div id="add_selector">
+      <button id="add" data-id="2">+</button>
+      Add Selector
     </div>
 
     <div class="input_form">
-      <p>next page</p>
-      <input type="text" />
+      <p>Next Page Selector</p>
+      <input type="text" id="next_page" value=".ts-h-search-pagerBtn_next" />
     </div>
 
-    <button id="button">button</button>
+    <button id="scraping">Start Scraping</button>
+
+    <hr />
+    <div class="description">
+      <h2>How to use</h2>
+      <p>・URLにスクレイピング対象のURLを入力してください。</p>
+      <p>
+        ・Parent
+        Selectorに欲しいデータを囲んでいる要素のセレクターを指定してください。
+      </p>
+      <p>
+        ・欲しいデータの種類の分+ボタンでChild
+        Selectorフォームを追加してセレクターを指定してください。
+      </p>
+      <p>
+        ・複数ページにまたがる情報が必要な場合にはサイト内の「次へ」などのaタグのセレクターをNext
+        Page Selector指定してください。
+      </p>
+    </div>
   </body>
 </html>

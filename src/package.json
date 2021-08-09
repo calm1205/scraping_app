@@ -1,9 +1,13 @@
 {
-  "name": "sample",
+  "name": "scraping",
   "version": "1.0.0",
   "main": "index.html",
+  "type": "module",
   "window": {
     "resizable": false,
     "show_in_taskbar": true
+  },
+  "dependencies": {
+    "jsdom": "^16.6.0"
   }
 }
